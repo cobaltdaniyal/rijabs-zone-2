@@ -1,0 +1,2 @@
+primary color = #2F2F2F
+secondary color = #DAAF70

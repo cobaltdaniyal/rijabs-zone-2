@@ -1,0 +1,24 @@
+.navLogo{
+    width: 300px;
+    margin: 10px;
+}
+.Nav{
+    background-color: transparent !important;
+}
+.navLinks{
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #DAAF70;
+    background-color: #2F2F2F;
+    border: 2px solid #DAAF70;
+    font-weight: bold;
+}
+.navLinks:hover{
+    text-decoration: none;
+    color: #2F2F2F;
+    background-color: #DAAF70;
+    border: 2px solid #2F2F2F;
+}
