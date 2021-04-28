@@ -1,0 +1,23 @@
+.categoryMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.categorySection{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cat{
+    width: 300px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Langar';
+    font-size: 18px;
+    background-color: #DAAF70 !important;
+}

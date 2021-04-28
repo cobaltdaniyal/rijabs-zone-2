@@ -6,6 +6,7 @@ import slider1 from '../../assets/images/slider1.jpg'
 import slider2 from '../../assets/images/slider2.jpg'
 import slider3 from '../../assets/images/slider3.jpg'
 import slider4 from '../../assets/images/slider4.jpg'
+import Category from '../Category/Category';
 
 class Home extends Component {
     render() {
@@ -15,7 +16,7 @@ class Home extends Component {
 
                 {/* <<<<<<<<<<<<<<<<<<<<<<<<<< CAROUSEL START >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
                 <div className='carouselMain'>
-                    <Carousel nextIcon >
+                    <Carousel prevIcon nextIcon>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
@@ -51,10 +52,10 @@ class Home extends Component {
                     </Carousel>
                 </div>
                 {/* <<<<<<<<<<<<<<<<<<<<<<<<<< CAROUSEL END >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+                <>
+                    <Category />
+                </>
 
-                <div>
-                    <h1>asdasdasds</h1>
-                </div>
 
             </div>
         )
