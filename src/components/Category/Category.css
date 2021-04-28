@@ -2,6 +2,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.mainHeading{
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #DAAF70;
+    font-family: 'Langar';
 }
 .categorySection{
     width: 100%;
@@ -19,5 +27,6 @@
     font-weight: bold;
     font-family: 'Langar';
     font-size: 18px;
+    color: #2F2F2F;
     background-color: #DAAF70 !important;
 }

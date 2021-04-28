@@ -7,6 +7,7 @@ class Category extends Component {
     render() {
         return (
             <div className='categoryMain'>
+                <h1 className='mainHeading'>Categories</h1>
                 <div className='categorySection'>
                     <Card className='cat' body>Men's Fashion</Card>
                     <Card className='cat' body>Men's Accessories</Card>

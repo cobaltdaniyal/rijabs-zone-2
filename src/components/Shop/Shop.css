@@ -1,0 +1,13 @@
+.shopMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.shopSection{
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}

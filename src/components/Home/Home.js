@@ -7,6 +7,7 @@ import slider2 from '../../assets/images/slider2.jpg'
 import slider3 from '../../assets/images/slider3.jpg'
 import slider4 from '../../assets/images/slider4.jpg'
 import Category from '../Category/Category';
+import Shop from '../Shop/Shop';
 
 class Home extends Component {
     render() {
@@ -54,6 +55,7 @@ class Home extends Component {
                 {/* <<<<<<<<<<<<<<<<<<<<<<<<<< CAROUSEL END >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
                 <>
                     <Category />
+                    <Shop />
                 </>
 
 
