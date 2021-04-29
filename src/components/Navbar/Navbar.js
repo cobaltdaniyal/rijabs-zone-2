@@ -6,7 +6,59 @@ import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
+    state = {
+        show: false,
+        authUser: {},
+        show2: false,
+    }
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged((user) => {
+            this.setState({
+                authUser: user,
+            })
+            if (user) {
+
+                firebase.database().ref('users').on('value', (data) => {
+                    for (var key in data.val()) {
+                        if (user.email === data.val()[key].email) {
+                            this.setState({
+                                authUser: data.val()[key],
+                                show2: false,
+                                show: false,
+                            })
+                        } else {
+                            this.setState({ signout: true })
+                        }
+                    }
+                })
+            }
+        })
+
+    }
+    signOut = () => {
+        firebase.auth().signOut().then(() => {
+            this.setState({ show: false })
+            Swal.fire({
+                icon: 'warning',
+                title: 'User Signed Out Successfully!',
+                showConfirmButton: false,
+                timer: 1000
+            })
+        }).catch(function (error) {
+            alert(error.message)
+        });
+    }
+    logInModal() {
+        this.setState({ show2: false })
+        this.setState({ show: !this.state.show })
+    }
+    signUpModal() {
+        this.setState({ show: false })
+        this.setState({ show2: !this.state.show2 })
+    }
+
     render() {
+        let { authUser } = this.state
         return (
             <div className='navbarMain'>
                 <ReactBootstrap.Navbar fixed="top" collapseOnSelect expand="lg" className='Nav' variant="light">
