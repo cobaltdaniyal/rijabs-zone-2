@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import firebase from '../../config/firebase';
+import firebase from '../../config/firebse';
 
 class Navbar extends Component {
     state = {
