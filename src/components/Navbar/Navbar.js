@@ -6,6 +6,7 @@ import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import firebase from '../../config/firebse';
+import { Modal, Button, InputGroup, FormControl, Image, Dropdown, Row } from 'react-bootstrap'
 
 class Navbar extends Component {
     state = {
@@ -70,16 +71,106 @@ class Navbar extends Component {
                     <ReactBootstrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <ReactBootstrap.Navbar.Collapse id="responsive-navbar-nav">
                         <ReactBootstrap.Nav className="mr-auto">
-                           
+
                         </ReactBootstrap.Nav>
                         <ReactBootstrap.Nav>
-                        <Link className='navLinks' to='/' >Home</Link>
+                            <Link className='navLinks' to='/' >Home</Link>
                             <Link className='navLinks' to='/shop' >Shop</Link>
                             <Link className='navLinks' to='/contact' >Contact</Link>
                             <Link className='navLinks' to='/contact' >Login</Link>
                         </ReactBootstrap.Nav>
                     </ReactBootstrap.Navbar.Collapse>
                 </ReactBootstrap.Navbar>
+                <div className='modal-dialog modal-dialog-centered'>
+                    <Modal show={this.state.show} onHide={() => this.logInModal()}>
+                        <Modal.Body className='modalBody'>
+                            <div align='center'>
+
+                                <h3 className='modalHeading'>WELCOME BACK</h3>
+                                <h6 className='or'><span className="line-center">Continue with</span></h6>
+
+                                <Button onClick={() => this.props.googleLogin()} variant="danger" className='modBtns'>
+                                    <i className="fa fa-google modIcons" aria-hidden="true"></i> Google
+                                </Button>
+                                <Button onClick={() => this.props.facebookLogin()} className='modBtns'>
+                                    <i className="fa fa-facebook modIcons" aria-hidden="true"></i> Facebook
+                                </Button>
+                                <Button variant="dark" className='modBtns'>
+                                    <i className="fa fa-github modIcons" aria-hidden="true"></i> Github
+                                </Button>
+
+                                <h6 className='or'><span className="line-center">OR</span></h6>
+
+                                <InputGroup className="mb-3">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="inputGroup-sizing-sm"><i className="fa fa-envelope" aria-hidden="true"></i></InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl placeholder='Email' aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                                </InputGroup>
+
+                                <InputGroup className="mb-3">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="inputGroup-sizing-sm"><i className="fa fa-lock" aria-hidden="true"></i></InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl placeholder='Password' aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                                </InputGroup>
+                                <Button variant="primary" className='logInBtn' block>Log In</Button>
+
+                                <p>Don't have an account?
+                                    <Button variant="light" className='toSignupBtn' onClick={() => this.signUpModal()}> &nbsp; Sign Up</Button>
+                                </p>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal show={this.state.show2} onHide={() => this.signUpModal()}>
+                        <Modal.Body className='modalBody'>
+                            <div align='center'>
+
+                                <h3 className='modalHeading'>WELCOME To WLUDIO BLOG</h3>
+                                <h6 className='or'><span className="line-center">Continue with</span></h6>
+
+                                <Button onClick={() => this.props.googleLogin()} variant="danger" className='modBtns'>
+                                    <i className="fa fa-google modIcons" aria-hidden="true"></i> Google
+                                </Button>
+                                <Button onClick={() => this.props.facebookLogin()} className='modBtns'>
+                                    <i className="fa fa-facebook modIcons" aria-hidden="true"></i> Facebook
+                                </Button>
+                                <Button variant="dark" className='modBtns'>
+                                    <i className="fa fa-github modIcons" aria-hidden="true"></i> Github
+                                </Button>
+
+                                <h6 className='or'><span className="line-center">OR</span></h6>
+
+                                <InputGroup className="mb-3">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="inputGroup-sizing-sm"><i className="fa fa-user" aria-hidden="true"></i></InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl placeholder='Full Name' aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                                </InputGroup>
+
+                                <InputGroup className="mb-3">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="inputGroup-sizing-sm"><i className="fa fa-envelope" aria-hidden="true"></i></InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl placeholder='Email' aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                                </InputGroup>
+
+                                <InputGroup className="mb-3">
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="inputGroup-sizing-sm"><i className="fa fa-lock" aria-hidden="true"></i></InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl placeholder='Password' aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                                </InputGroup>
+                                <Button variant="primary" className='logInBtn' block>Create Account</Button>
+
+                                <p>Already have an account?
+                                    <Button variant="light" className='toSignupBtn' onClick={() => this.logInModal()}> &nbsp; Log In</Button>
+                                </p>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                </div>
             </div>
         )
     }
