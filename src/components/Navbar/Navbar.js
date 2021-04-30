@@ -22,7 +22,7 @@ class Navbar extends Component {
             if (user) {
 
                 firebase.database().ref('users').on('value', (data) => {
-                    for (var key in data.val()) {
+                    for (var key in data.val()) { 
                         if (user.email === data.val()[key].email) {
                             this.setState({
                                 authUser: data.val()[key],
