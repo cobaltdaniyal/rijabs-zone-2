@@ -6,7 +6,7 @@ import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import firebase from '../../config/firebse';
-import { Modal, Button, InputGroup, FormControl, Image, Dropdown, Row } from 'react-bootstrap'
+import { Modal, Button, InputGroup, FormControl} from 'react-bootstrap'
 
 class Navbar extends Component {
     state = {
