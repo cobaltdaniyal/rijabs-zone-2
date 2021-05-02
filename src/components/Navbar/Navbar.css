@@ -6,15 +6,15 @@
     background-color: transparent !important;
 }
 .navLinks{
-    font-family: 'Langar';
-    width: 100px;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    border-radius: 5px;
-    color: #DAAF70;
-    background-color: #2F2F2F;
-    border: 2px solid #DAAF70;
+    font-family: 'Langar' !important;
+    width: 100px !important;
+    margin: 5px !important;
+    padding: 5px !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    color: #DAAF70 !important;
+    background-color: #2F2F2F !important;
+    border: 2px solid #DAAF70 !important;
     font-weight: bold;
 }
 .navLinks:hover{

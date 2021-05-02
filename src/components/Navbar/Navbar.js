@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { Modal, Button, InputGroup, FormControl } from 'react-bootstrap'
+import { Modal, Button, InputGroup, FormControl, Row, Dropdown, Image } from 'react-bootstrap'
 import firebase from '../../config/firebse';
 import { connect } from 'react-redux';
 import { facebookLogin } from '../../Store/action/index';
@@ -80,7 +80,33 @@ class Navbar extends Component {
                             <Link className='navLinks' to='/' >Home</Link>
                             <Link className='navLinks' to='/shop' >Shop</Link>
                             <Link className='navLinks' to='/contact' >Contact</Link>
-                            <Link className='navLinks' to='/contact' >Login</Link>
+                            {this.state.authUser ?
+                                <div>
+                                    <Row>
+                                        <Dropdown className='logUserdropdown'>
+                                            <Dropdown.Toggle className='dropdownToggle' id="dropdown-basic">
+                                                <Image src={authUser.profile} roundedCircle className='logUserImg' />
+                                                {authUser.name}
+                                            </Dropdown.Toggle>
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item onClick={() => this.signOut()}>Log Out</Dropdown.Item>
+                                                <Dropdown.Item>
+                                                    <Link className='dropdownList' to='/profile'>
+                                                        My Profile
+                                                        </Link>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item>
+                                                    <Link className='dropdownList' to='/edit-profile'>
+                                                        Edit Profile
+                                                        </Link>
+                                                </Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+                                    </Row>
+                                </div>
+                                :
+                                <ReactBootstrap.Nav.Link className='navLinks' onClick={() => this.logInModal()}>Login</ReactBootstrap.Nav.Link>
+                            }
                         </ReactBootstrap.Nav>
                     </ReactBootstrap.Navbar.Collapse>
                 </ReactBootstrap.Navbar>
