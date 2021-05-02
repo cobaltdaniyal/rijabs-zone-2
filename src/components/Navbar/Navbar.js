@@ -5,8 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Modal, Button, InputGroup, FormControl } from 'react-bootstrap'
 import firebase from '../../config/firebse';
-import { Modal, Button, InputGroup, FormControl} from 'react-bootstrap'
+import { connect } from 'react-redux';
+import { facebookLogin } from '../../Store/action/index';
+import { googleLogin } from '../../Store/action/index'
 
 class Navbar extends Component {
     state = {
@@ -22,7 +25,7 @@ class Navbar extends Component {
             if (user) {
 
                 firebase.database().ref('users').on('value', (data) => {
-                    for (var key in data.val()) { 
+                    for (var key in data.val()) {
                         if (user.email === data.val()[key].email) {
                             this.setState({
                                 authUser: data.val()[key],
@@ -175,4 +178,11 @@ class Navbar extends Component {
         )
     }
 }
-export default Navbar;
+
+
+const mapDispatchToProps = (dispatch) => ({
+    facebookLogin: () => dispatch(facebookLogin()),
+    googleLogin: () => dispatch(googleLogin())
+})
+
+export default connect(null, mapDispatchToProps)(Navbar);

@@ -1,4 +1,4 @@
-import firebase from '../../config/firebase';
+import firebase from '../../config/firebse';
 import Swal from 'sweetalert2'
 
 
