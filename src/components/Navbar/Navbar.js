@@ -115,7 +115,7 @@ class Navbar extends Component {
                         <Modal.Body className='modalBody'>
                             <div align='center'>
 
-                                <h3 className='modalHeading'>WELCOME BACK</h3>
+                                <h3 className='modalHeading'>Welcome Back</h3>
                                 <h6 className='or'><span className="line-center">Continue with</span></h6>
 
                                 <Button onClick={() => this.props.googleLogin()} variant="danger" className='modBtns'>
@@ -156,7 +156,7 @@ class Navbar extends Component {
                         <Modal.Body className='modalBody'>
                             <div align='center'>
 
-                                <h3 className='modalHeading'>WELCOME To WLUDIO BLOG</h3>
+                                <h3 className='modalHeading'>Welcome To Rijab's Zone</h3>
                                 <h6 className='or'><span className="line-center">Continue with</span></h6>
 
                                 <Button onClick={() => this.props.googleLogin()} variant="danger" className='modBtns'>
