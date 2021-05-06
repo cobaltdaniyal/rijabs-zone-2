@@ -116,7 +116,7 @@ class Navbar extends Component {
                             <div align='center'>
 
                                 <h3 className='modalHeading'>Welcome Back</h3>
-                                <h6 className='or'><span className="line-center">Continue with</span></h6>
+                                <h6 className='or'><span className="line-center">Log in with</span></h6>
 
                                 <Button onClick={() => this.props.googleLogin()} variant="danger" className='modBtns'>
                                     <i className="fa fa-google modIcons" aria-hidden="true"></i> Google
