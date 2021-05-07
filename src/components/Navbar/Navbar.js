@@ -191,7 +191,7 @@ class Navbar extends Component {
                                     </InputGroup.Prepend>
                                     <FormControl placeholder='Password' aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
                                 </InputGroup>
-                                <Button variant="primary" className='logInBtn' block>Create Account</Button>
+                                <Button variant="primary" className='logInBtn' block>Create an Account</Button>
 
                                 <p>Already have an account?
                                     <Button variant="light" className='toSignupBtn' onClick={() => this.logInModal()}> &nbsp; Log In</Button>
