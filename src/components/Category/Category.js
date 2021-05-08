@@ -11,6 +11,7 @@ class Category extends Component {
                 <div className='categorySection'>
                     <Card className='cat' body>Men's Fashion</Card>
                     <Card className='cat' body>Men's Watches</Card>
+                    <Card className='cat' body>Men's Wallet</Card>
                     <Card className='cat' body>Men's Accessories</Card>
                     <Card className='cat' body>Women's Fashion</Card>
                     <Card className='cat' body>Women's Watches</Card>
