@@ -12,6 +12,7 @@ class Category extends Component {
                     <Card className='cat' body>Men's Fashion</Card>
                     <Card className='cat' body>Men's Watches</Card>
                     <Card className='cat' body>Men's Wallet</Card>
+                    <Card className='cat' body>Men's Rings</Card>
                     <Card className='cat' body>Men's Accessories</Card>
                     <Card className='cat' body>Women's Fashion</Card>
                     <Card className='cat' body>Women's Watches</Card>
