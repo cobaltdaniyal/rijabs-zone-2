@@ -14,6 +14,4 @@
 .shopCard{
     width: 400px;
     margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
 }
