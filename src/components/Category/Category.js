@@ -22,6 +22,13 @@ class Category extends Component {
                     <Card className='cat' body>Babies's Fashion</Card>
                     <Card className='cat' body>Babies's Accessories</Card>
                     <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
+                    <Card className='cat' body>Babies's Toys</Card>
                 </div>
             </div>
         )
